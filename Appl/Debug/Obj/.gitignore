@@ -1,0 +1,13 @@
+*.o
+*.pbi
+*.pbi.cout
+/LEDControlPad.pbd
+/LEDControlPad.pbd.browse
+*.pbd
+*.pbd.browse
+*.ninja_deps
+*.ninja_log
+*.ninja
+*.dep
+*.xcl
+*.pbw

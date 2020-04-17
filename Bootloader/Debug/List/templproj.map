@@ -1,0 +1,388 @@
+###############################################################################
+#
+# IAR ELF Linker V3.11.1.207 for STM8                     04/Feb/2020  14:37:59
+# Copyright 2010-2019 IAR Systems AB.
+#
+#    Output file  =  D:\FDSI\PulseCounter\Bootloader\Debug\Exe\templproj.out
+#    Map file     =  D:\FDSI\PulseCounter\Bootloader\Debug\List\templproj.map
+#    Command line =  
+#        -f C:\Users\kopusovm\AppData\Local\Temp\EW6164.tmp
+#        (D:\FDSI\PulseCounter\Bootloader\Debug\Obj\main.o
+#        D:\FDSI\PulseCounter\Bootloader\Debug\Obj\stm8l15x_clk.o
+#        D:\FDSI\PulseCounter\Bootloader\Debug\Obj\stm8l15x_flash.o
+#        D:\FDSI\PulseCounter\Bootloader\Debug\Obj\stm8l15x_gpio.o
+#        D:\FDSI\PulseCounter\Bootloader\Debug\Obj\stm8l15x_i2c.o
+#        D:\FDSI\PulseCounter\Bootloader\Debug\Obj\stm8l15x_interrupt.o
+#        D:\FDSI\PulseCounter\Bootloader\Debug\Obj\stm8l15x_iwdg.o --redirect
+#        _Printf=_PrintfFullNoMb --redirect _Scanf=_ScanfFullNoMb
+#        --no_out_extension -o
+#        D:\FDSI\PulseCounter\Bootloader\Debug\Exe\templproj.out --map
+#        D:\FDSI\PulseCounter\Bootloader\Debug\List\templproj.map --config
+#        D:\FDSI\PulseCounter\Bootloader\lnkstm8l151g6.icf --config_def
+#        _CSTACK_SIZE=0x100 --config_def _HEAP_SIZE=0x100 --entry
+#        __iar_program_start --debug_lib)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+__SystemLibrary            = DLib
+__code_model               = medium_or_large
+__core                     = stm8
+__data_model               = medium
+__dlib_file_descriptor     = 0
+__dlib_full_locale_support = 0
+__rt_version               = 4
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at start of [0x000000-0x0000ff] { rw section .vregs };
+"A1":  place at end of [0x000000-0x0007ff] { block CSTACK };
+"P2":  place in [from 0x000000 to 0x0007ff] {
+          block HEAP, rw section __DLIB_PERTHREAD, rw section .far.bss,
+          rw section .far.data, rw section .far.noinit,
+          rw section .far_func.textrw, rw section .huge.bss,
+          rw section .huge.data, rw section .huge.noinit,
+          rw section .huge_func.textrw, rw section .iar.dynexit,
+          rw section .near.bss, rw section .near.data, rw section .near.noinit,
+          rw section .near_func.textrw };
+"A2":  place at start of [0x008000-0x00ffff] { block INTVEC };
+"P3":  place in [from 0x008000 to 0x00ffff] {
+          ro section __DLIB_PERTHREAD_init, ro section .far.data_init,
+          ro section .far_func.textrw_init, ro section .huge.data_init,
+          ro section .huge_func.textrw_init, ro section .iar.init_table,
+          ro section .init_array, ro section .near.data_init,
+          ro section .near.rodata, ro section .near_func.text,
+          ro section .near_func.textrw_init, ro section .tiny.data_init,
+          ro section .tiny.rodata_init };
+"P4":  place in [from 0x008000 to 0x00ffff] {
+          ro section .far.rodata, ro section .far_func.text };
+"P5":  place in [from 0x008000 to 0x00ffff] {
+          ro section .huge.rodata, ro section .huge_func.text };
+do not initialize {
+   rw section .eeprom.noinit, rw section .far.noinit, rw section .huge.noinit,
+   rw section .near.noinit, rw section .tiny.noinit, rw section .vregs };
+initialize by copy {
+   rw section .far.bss, rw section .far.data, rw section .far_func.textrw,
+   rw section .huge.bss, rw section .huge.data, rw section .huge_func.textrw,
+   rw section .iar.dynexit, rw section .near.bss, rw section .near.data,
+   rw section .near_func.textrw, rw section .tiny.bss, rw section .tiny.data,
+   ro section .tiny.rodata };
+
+No sections matched the following patterns:
+
+  ro section .far.data_init          in "P3-P5"
+  ro section .far.rodata             in "P3-P5"
+  ro section .huge.data_init         in "P3-P5"
+  ro section .huge.rodata            in "P3-P5"
+  ro section .huge_func.text         in "P3-P5"
+  ro section .huge_func.textrw_init  in "P3-P5"
+  ro section .iar.init_table         in "P3-P5"
+  ro section .init_array             in "P3-P5"
+  ro section .near_func.text         in "P3-P5"
+  ro section .near_func.textrw_init  in "P3-P5"
+  ro section .tiny.data_init         in "P3-P5"
+  ro section .tiny.rodata_init       in "P3-P5"
+  ro section __DLIB_PERTHREAD_init   in "P3-P5"
+  rw section .far.bss                in "P2"
+  rw section .far.data               in "P2"
+  rw section .far.noinit             in "P2"
+  rw section .huge.bss               in "P2"
+  rw section .huge.data              in "P2"
+  rw section .huge.noinit            in "P2"
+  rw section .huge_func.textrw       in "P2"
+  rw section .iar.dynexit            in "P2"
+  rw section .near.noinit            in "P2"
+  rw section .near_func.textrw       in "P2"
+  rw section .tiny.bss               in "P1"
+  rw section .tiny.data              in "P1"
+  rw section .tiny.noinit            in "P1"
+  rw section .tiny.rodata            in "P1"
+  rw section __DLIB_PERTHREAD        in "P2"
+  section .eeprom.data               in "P6-P8"
+  section .eeprom.noinit             in "P6-P8"
+  section .eeprom.rodata             in "P6-P8"
+
+
+  Section             Kind      Address   Size  Object
+  -------             ----      -------   ----  ------
+"A0":                                     0x10
+  .vregs              uninit   0x000000   0x10  vregs.o [4]
+                             - 0x000010   0x10
+
+"P2", part 1 of 2:                        0xa6
+  P2-1                         0x000010   0xa6  <Init block>
+    .far_func.textrw  inited   0x000010   0x9a  stm8l15x_flash.o [1]
+    .near.data        inited   0x0000aa    0x9  main.o [1]
+    .near.data        inited   0x0000b3    0x3  main.o [1]
+                             - 0x0000b6   0xa6
+
+"P2", part 2 of 2:                        0xa6
+  .near.bss           zero     0x0000b6   0x96  main.o [1]
+  .near.bss           zero     0x00014c    0x5  main.o [1]
+  .near.bss           zero     0x000151    0x2  main.o [1]
+  .near.bss           zero     0x000153    0x1  main.o [1]
+  .near.bss           zero     0x000154    0x1  main.o [1]
+  .near.bss           zero     0x000155    0x1  main.o [1]
+  .near.bss           zero     0x000156    0x1  main.o [1]
+  .near.bss           zero     0x000157    0x1  main.o [1]
+  .near.bss           zero     0x000158    0x1  main.o [1]
+  .near.bss           zero     0x000159    0x1  main.o [1]
+  .near.bss           zero     0x00015a    0x1  main.o [1]
+  .near.bss           zero     0x00015b    0x1  main.o [1]
+                             - 0x00015c   0xa6
+
+"A1":                                    0x100
+  CSTACK                       0x000700  0x100  <Block>
+    CSTACK            uninit   0x000700  0x100  <Block tail>
+                             - 0x000800  0x100
+
+"A2":                                     0x80
+  INTVEC                       0x008000   0x80  <Block>
+    .intvec           const    0x008000   0x80  stm8l15x_interrupt.o [1]
+                             - 0x008080   0x80
+
+"P3-P5":                                 0xb28
+  .far_func.text      ro code  0x008080  0x1fc  stm8l15x_i2c.o [1]
+  .far_func.text      ro code  0x00827c  0x18c  main.o [1]
+  .far_func.text      ro code  0x008408  0x16c  main.o [1]
+  .far_func.text      ro code  0x008574  0x13a  long.o [4]
+  .far_func.text      ro code  0x0086ae  0x113  main.o [1]
+  Initializer bytes   const    0x0087c1   0xa6  <for P2-1>
+  .far_func.text      ro code  0x008867   0x6a  stm8l15x_gpio.o [1]
+  .far_func.text      ro code  0x0088d1   0x65  stm8l15x_clk.o [1]
+  .far_func.text      ro code  0x008936   0x64  main.o [1]
+  .far_func.text      ro code  0x00899a   0x3f  short.o [4]
+  .far_func.text      ro code  0x0089d9   0x39  stm8l15x_clk.o [1]
+  .far_func.text      ro code  0x008a12   0x30  stm8l15x_i2c.o [1]
+  .far_func.text      ro code  0x008a42   0x28  init_small.o [4]
+  .iar.init_table     const    0x008a6a   0x14  - Linker created -
+  .far_func.text      ro code  0x008a7e   0x1e  init.o [4]
+  .far_func.text      ro code  0x008a9c   0x1e  init_small.o [4]
+  .far_func.text      ro code  0x008aba   0x1c  vreg_util.o [4]
+  .far_func.text      ro code  0x008ad6   0x1a  stm8l15x_flash.o [1]
+  .far_func.text      ro code  0x008af0   0x17  cstartup.o [4]
+  .far_func.text      ro code  0x008b07   0x16  __dbg_xxexit.o [3]
+  .far_func.text      ro code  0x008b1d   0x13  stm8l15x_gpio.o [1]
+  .far_func.text      ro code  0x008b30   0x12  stm8l15x_flash.o [1]
+  .far_func.text      ro code  0x008b42    0xf  stm8l15x_flash.o [1]
+  .far_func.text      ro code  0x008b51    0xe  far_util.o [4]
+  .far_func.text      ro code  0x008b5f    0xd  stm8l15x_i2c.o [1]
+  .far_func.text      ro code  0x008b6c    0xb  stm8l15x_flash.o [1]
+  .far_func.text      ro code  0x008b77    0x6  cexit.o [4]
+  .far_func.text      ro code  0x008b7d    0x5  stm8l15x_iwdg.o [1]
+  .far_func.text      ro code  0x008b82    0x5  stm8l15x_iwdg.o [1]
+  .near.rodata        const    0x008b87    0x5  stm8l15x_clk.o [1]
+  .far_func.text      ro code  0x008b8c    0x4  stm8l15x_clk.o [1]
+  .far_func.text      ro code  0x008b90    0x4  stm8l15x_flash.o [1]
+  .far_func.text      ro code  0x008b94    0x4  stm8l15x_iwdg.o [1]
+  .far_func.text      ro code  0x008b98    0x4  stm8l15x_iwdg.o [1]
+  .far_func.text      ro code  0x008b9c    0x4  stm8l15x_iwdg.o [1]
+  .far_func.text      ro code  0x008ba0    0x4  exit.o [4]
+  .far_func.text      ro code  0x008ba4    0x3  low_level_init.o [4]
+  .far_func.text      ro code  0x008ba7    0x1  __dbg_break.o [3]
+                             - 0x008ba8  0xb28
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address   Size
+          -------   ----
+Zero (__iar_zero_init2)
+    1 destination range, total size 0xa6:
+          0x0000b6  0xa6
+
+Copy (__iar_copy_init2)
+    1 source range, total size 0xa6:
+          0x0087c1  0xa6
+    1 destination range, total size 0xa6:
+          0x000010  0xa6
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                ro code  rw code  ro data  rw data
+    ------                -------  -------  -------  -------
+D:\FDSI\PulseCounter\Bootloader\Debug\Obj: [1]
+    main.o                  1 135                12      178
+    stm8l15x_clk.o            162                 5
+    stm8l15x_flash.o           74      154      154
+    stm8l15x_gpio.o           125
+    stm8l15x_i2c.o            569
+    stm8l15x_interrupt.o                        128
+    stm8l15x_iwdg.o            22
+    --------------------------------------------------------
+    Total:                  2 087      154      299      178
+
+command line: [2]
+    --------------------------------------------------------
+    Total:
+
+dbgstm8mmd.a: [3]
+    __dbg_break.o               1
+    __dbg_xxexit.o             22
+    --------------------------------------------------------
+    Total:                     23
+
+dlstm8mmn.a: [4]
+    cexit.o                     6
+    cstartup.o                 23
+    exit.o                      4
+    far_util.o                 14
+    init.o                     30
+    init_small.o               70
+    long.o                    314
+    low_level_init.o            3
+    short.o                    63
+    vreg_util.o                28
+    vregs.o                                               16
+    --------------------------------------------------------
+    Total:                    555                         16
+
+    Linker created                               20      256
+------------------------------------------------------------
+    Grand Total:            2 665      154      319      450
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                    Address   Size  Type      Object
+-----                    -------   ----  ----      ------
+.iar.init_table$$Base   0x008a6a          --   Gb  - Linker created -
+.iar.init_table$$Limit  0x008a7e          --   Gb  - Linker created -
+?add32_l0_l0_0x         0x00858f         Code  Gb  long.o [4]
+?add32_l0_l0_l1         0x00858c         Code  Gb  long.o [4]
+?b0                     0x000000         Data  Gb  vregs.o [4]
+?b1                     0x000001         Data  Gb  vregs.o [4]
+?b10                    0x00000a         Data  Gb  vregs.o [4]
+?b11                    0x00000b         Data  Gb  vregs.o [4]
+?b12                    0x00000c         Data  Gb  vregs.o [4]
+?b13                    0x00000d         Data  Gb  vregs.o [4]
+?b14                    0x00000e         Data  Gb  vregs.o [4]
+?b15                    0x00000f         Data  Gb  vregs.o [4]
+?b2                     0x000002         Data  Gb  vregs.o [4]
+?b3                     0x000003         Data  Gb  vregs.o [4]
+?b4                     0x000004         Data  Gb  vregs.o [4]
+?b5                     0x000005         Data  Gb  vregs.o [4]
+?b6                     0x000006         Data  Gb  vregs.o [4]
+?b7                     0x000007         Data  Gb  vregs.o [4]
+?b8                     0x000008         Data  Gb  vregs.o [4]
+?b9                     0x000009         Data  Gb  vregs.o [4]
+?e0                     0x000001         Data  Gb  vregs.o [4]
+?e1                     0x000005         Data  Gb  vregs.o [4]
+?e2                     0x000009         Data  Gb  vregs.o [4]
+?e3                     0x00000d         Data  Gb  vregs.o [4]
+?inc32_0x_0x            0x00857e         Code  Gb  long.o [4]
+?inc32_l1_l1            0x008574         Code  Gb  long.o [4]
+?inc32_l2_l2            0x008579         Code  Gb  long.o [4]
+?l0                     0x000000         Data  Gb  vregs.o [4]
+?l1                     0x000004         Data  Gb  vregs.o [4]
+?l2                     0x000008         Data  Gb  vregs.o [4]
+?l3                     0x00000c         Data  Gb  vregs.o [4]
+?load24_e1_0x           0x008b51         Code  Gb  far_util.o [4]
+?mul16_x_x_w0           0x00899a         Code  Gb  short.o [4]
+?mul32_l0_l0_l1         0x0085a7         Code  Gb  long.o [4]
+?push_w4                0x008aba         Code  Gb  vreg_util.o [4]
+?sdiv16_x_x_y           0x0089b8         Code  Gb  short.o [4]
+?sll16_x_x_a            0x0089d1         Code  Gb  short.o [4]
+?sll32_0x_0x_a          0x0086a0         Code  Gb  long.o [4]
+?sll32_l0_l0_a          0x00869d         Code  Gb  long.o [4]
+?ucmp32_c_l0_l1         0x008692         Code  Gb  long.o [4]
+?udiv32_l0_l0_l1        0x008625         Code  Gb  long.o [4]
+?umod32_l1_l0_l1        0x008625         Code  Gb  long.o [4]
+?w0                     0x000000         Data  Gb  vregs.o [4]
+?w1                     0x000002         Data  Gb  vregs.o [4]
+?w2                     0x000004         Data  Gb  vregs.o [4]
+?w3                     0x000006         Data  Gb  vregs.o [4]
+?w4                     0x000008         Data  Gb  vregs.o [4]
+?w5                     0x00000a         Data  Gb  vregs.o [4]
+?w6                     0x00000c         Data  Gb  vregs.o [4]
+?w7                     0x00000e         Data  Gb  vregs.o [4]
+CLK_GetClockFreq        0x0089d9   0x39  Code  Gb  stm8l15x_clk.o [1]
+CLK_PeripheralClockConfig
+                        0x0088d1   0x65  Code  Gb  stm8l15x_clk.o [1]
+CLK_SYSCLKDivConfig     0x008b8c    0x4  Code  Gb  stm8l15x_clk.o [1]
+CSTACK$$Base            0x000700          --   Gb  - Linker created -
+CSTACK$$Limit           0x000800          --   Gb  - Linker created -
+DataBuffer              0x0000b6   0x96  Data  Gb  main.o [1]
+FLASH_GetFlagStatus     0x008b30   0x12  Code  Gb  stm8l15x_flash.o [1]
+FLASH_Lock              0x008b6c    0xb  Code  Gb  stm8l15x_flash.o [1]
+FLASH_ProgramBlock      0x000010   0x9a  Code  Gb  stm8l15x_flash.o [1]
+FLASH_ReadByte          0x008b90    0x4  Code  Gb  stm8l15x_flash.o [1]
+FLASH_SetProgrammingTime
+                        0x008b42    0xf  Code  Gb  stm8l15x_flash.o [1]
+FLASH_Unlock            0x008ad6   0x1a  Code  Gb  stm8l15x_flash.o [1]
+GPIO_DeInit             0x008b1d   0x13  Code  Gb  stm8l15x_gpio.o [1]
+GPIO_Init               0x008867   0x6a  Code  Gb  stm8l15x_gpio.o [1]
+I2C_Cmd                 0x008b5f    0xd  Code  Gb  stm8l15x_i2c.o [1]
+I2C_DeInit              0x008a12   0x30  Code  Gb  stm8l15x_i2c.o [1]
+I2C_Init                0x008080  0x1fc  Code  Gb  stm8l15x_i2c.o [1]
+I2C_received_packet     0x0000aa    0x9  Data  Gb  main.o [1]
+I2C_transmitted_packet  0x0000b3    0x3  Data  Gb  main.o [1]
+I2C_wait_packet         0x00827c  0x18c  Code  Gb  main.o [1]
+I2C_wait_packet::amount_rx_bytes
+                        0x000158    0x1  Data  Lc  main.o [1]
+I2C_wait_packet::got_check_summ
+                        0x00015b    0x1  Data  Lc  main.o [1]
+I2C_wait_packet::got_instruction
+                        0x000159    0x1  Data  Lc  main.o [1]
+I2C_wait_packet::got_size
+                        0x00015a    0x1  Data  Lc  main.o [1]
+I2C_wait_packet::st_cn0
+                        0x000157    0x1  Data  Lc  main.o [1]
+I2C_wait_packet::st_cn1
+                        0x000156    0x1  Data  Lc  main.o [1]
+INTVEC$$Base            0x008000          --   Gb  - Linker created -
+INTVEC$$Limit           0x008080          --   Gb  - Linker created -
+IWDG_Enable             0x008b82    0x5  Code  Gb  stm8l15x_iwdg.o [1]
+IWDG_ReloadCounter      0x008b7d    0x5  Code  Gb  stm8l15x_iwdg.o [1]
+IWDG_SetPrescaler       0x008b98    0x4  Code  Gb  stm8l15x_iwdg.o [1]
+IWDG_SetReload          0x008b9c    0x4  Code  Gb  stm8l15x_iwdg.o [1]
+IWDG_WriteAccessCmd     0x008b94    0x4  Code  Gb  stm8l15x_iwdg.o [1]
+Receive::tx_curr_byte   0x000155    0x1  Data  Lc  main.o [1]
+Region$$Table$$Base     0x008a6a          --   Gb  - Linker created -
+Region$$Table$$Limit    0x008a7e          --   Gb  - Linker created -
+RoutinesInRAM           0x000153    0x1  Data  Gb  main.o [1]
+SYSDivFactor            0x008b87    0x5  Data  Gb  stm8l15x_clk.o [1]
+TransmittedData         0x00014c    0x5  Data  Gb  main.o [1]
+__DebugBreak            0x008ba7    0x1  Code  Gb  __dbg_break.o [3]
+__exit                  0x008b07   0x16  Code  Gb  __dbg_xxexit.o [3]
+__iar_copy_init2        0x008a42         Code  Gb  init_small.o [4]
+__iar_data_init2        0x008a7e   0x1e  Code  Gb  init.o [4]
+__iar_program_start     0x008af0         Code  Gb  cstartup.o [4]
+__iar_zero_init2        0x008a9c         Code  Gb  init_small.o [4]
+__intvec                0x008000         Data  Gb  stm8l15x_interrupt.o [1]
+__low_level_init        0x008ba4    0x3  Code  Gb  low_level_init.o [4]
+_exit                   0x008b77         Code  Gb  cexit.o [4]
+exit                    0x008ba0    0x4  Code  Gb  exit.o [4]
+fmw_update_started      0x000154    0x1  Data  Gb  main.o [1]
+main                    0x0086ae  0x113  Code  Gb  main.o [1]
+run_apl                 0x008936   0x64  Code  Gb  main.o [1]
+run_update_application  0x008408  0x16c  Code  Lc  main.o [1]
+size_of_appl            0x000151    0x2  Data  Gb  main.o [1]
+
+
+[1] = D:\FDSI\PulseCounter\Bootloader\Debug\Obj
+[2] = command line
+[3] = dbgstm8mmd.a
+[4] = dlstm8mmn.a
+
+  2 665 bytes of readonly  code memory
+    154 bytes of readwrite code memory
+    319 bytes of readonly  data memory
+    450 bytes of readwrite data memory
+
+Errors: none
+Warnings: none

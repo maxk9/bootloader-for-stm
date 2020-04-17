@@ -1,0 +1,235 @@
+###############################################################################
+#
+# IAR Assembler V3.11.1.207 for STM8                      19/Nov/2019  15:04:38
+# Copyright 2010-2019 IAR Systems AB.
+#
+#    Source file  =  D:\FDSI\PulseCounter\Bootloader\stm8l15x_interrupt.s
+#    Command line =  
+#        -f C:\Users\kopusovm\AppData\Local\Temp\EWC2BA.tmp
+#        (D:\FDSI\PulseCounter\Bootloader\stm8l15x_interrupt.s -M<> -r -lo
+#        D:\FDSI\PulseCounter\Bootloader\Debug\List\ --code_model medium
+#        --data_model medium -o D:\FDSI\PulseCounter\Bootloader\Debug\Obj)
+#    List file    =  
+#        D:\FDSI\PulseCounter\Bootloader\Debug\List\stm8l15x_interrupt.lst
+#    Object file  =  
+#        D:\FDSI\PulseCounter\Bootloader\Debug\Obj\stm8l15x_interrupt.o
+#
+###############################################################################
+
+##############################################################################
+# Module ?interrupt                                                          #
+##############################################################################
+
+D:\FDSI\PulseCounter\Bootloader\stm8l15x_interrupt.s
+      1                        /**************************************************
+      2                         *
+      3                         * System initialization code for the STM8 IAR Compiler.
+      4                         *
+      5                         * Copyright 2010 IAR Systems AB.
+      6                         *
+      7                         * $Revision: 1413 $
+      8                         *
+      9                         ***************************************************
+     10                         *
+     11                         * To add your own interrupt handler to the table,
+     12                         * give it the label _interrupt_N, where N is the
+     13                         * offset from the RESET vector.  Your label will
+     14                         * override the corresponding weak label declaration
+     15                         * on the unhandled_exception function.
+     16                         *
+     17                         **************************************************/
+     18                        
+     19                                MODULE   ?interrupt
+     20                        
+     21    000000                      SECTION __DEFAULT_CODE_SECTION__:CODE:NOROOT
+     22                        
+     27                        
+     28    000000              unhandled_exception:
+     29                        
+     30    000000                      declare_label 1
+     30.1  000000                      PUBWEAK _interrupt_1
+     30.2  000000                              _interrupt_1:
+     31    000000                      declare_label 2
+     31.1  000000                      PUBWEAK _interrupt_2
+     31.2  000000                              _interrupt_2:
+     32    000000                      declare_label 3
+     32.1  000000                      PUBWEAK _interrupt_3
+     32.2  000000                              _interrupt_3:
+     33    000000                      declare_label 4
+     33.1  000000                      PUBWEAK _interrupt_4
+     33.2  000000                              _interrupt_4:
+     34    000000                      declare_label 5
+     34.1  000000                      PUBWEAK _interrupt_5
+     34.2  000000                              _interrupt_5:
+     35    000000                      declare_label 6
+     35.1  000000                      PUBWEAK _interrupt_6
+     35.2  000000                              _interrupt_6:
+     36    000000                      declare_label 7
+     36.1  000000                      PUBWEAK _interrupt_7
+     36.2  000000                              _interrupt_7:
+     37    000000                      declare_label 8
+     37.1  000000                      PUBWEAK _interrupt_8
+     37.2  000000                              _interrupt_8:
+     38    000000                      declare_label 9
+     38.1  000000                      PUBWEAK _interrupt_9
+     38.2  000000                              _interrupt_9:
+     39    000000                      declare_label 10
+     39.1  000000                      PUBWEAK _interrupt_10
+     39.2  000000                              _interrupt_10:
+     40    000000                      declare_label 11
+     40.1  000000                      PUBWEAK _interrupt_11
+     40.2  000000                              _interrupt_11:
+     41    000000                      declare_label 12
+     41.1  000000                      PUBWEAK _interrupt_12
+     41.2  000000                              _interrupt_12:
+     42    000000                      declare_label 13
+     42.1  000000                      PUBWEAK _interrupt_13
+     42.2  000000                              _interrupt_13:
+     43    000000                      declare_label 14
+     43.1  000000                      PUBWEAK _interrupt_14
+     43.2  000000                              _interrupt_14:
+     44    000000                      declare_label 15
+     44.1  000000                      PUBWEAK _interrupt_15
+     44.2  000000                              _interrupt_15:
+     45    000000                      declare_label 16
+     45.1  000000                      PUBWEAK _interrupt_16
+     45.2  000000                              _interrupt_16:
+     46    000000                      declare_label 17
+     46.1  000000                      PUBWEAK _interrupt_17
+     46.2  000000                              _interrupt_17:
+     47    000000                      declare_label 18
+     47.1  000000                      PUBWEAK _interrupt_18
+     47.2  000000                              _interrupt_18:
+     48    000000                      declare_label 19
+     48.1  000000                      PUBWEAK _interrupt_19
+     48.2  000000                              _interrupt_19:
+     49    000000                      declare_label 20
+     49.1  000000                      PUBWEAK _interrupt_20
+     49.2  000000                              _interrupt_20:
+     50    000000                      declare_label 21
+     50.1  000000                      PUBWEAK _interrupt_21
+     50.2  000000                              _interrupt_21:
+     51    000000                      declare_label 22
+     51.1  000000                      PUBWEAK _interrupt_22
+     51.2  000000                              _interrupt_22:
+     52    000000                      declare_label 23
+     52.1  000000                      PUBWEAK _interrupt_23
+     52.2  000000                              _interrupt_23:
+     53    000000                      declare_label 24
+     53.1  000000                      PUBWEAK _interrupt_24
+     53.2  000000                              _interrupt_24:
+     54    000000                      declare_label 25
+     54.1  000000                      PUBWEAK _interrupt_25
+     54.2  000000                              _interrupt_25:
+     55    000000                      declare_label 26
+     55.1  000000                      PUBWEAK _interrupt_26
+     55.2  000000                              _interrupt_26:
+     56    000000                      declare_label 27
+     56.1  000000                      PUBWEAK _interrupt_27
+     56.2  000000                              _interrupt_27:
+     57    000000                      declare_label 28
+     57.1  000000                      PUBWEAK _interrupt_28
+     57.2  000000                              _interrupt_28:
+     58    000000                      declare_label 29
+     58.1  000000                      PUBWEAK _interrupt_29
+     58.2  000000                              _interrupt_29:
+     59    000000                      declare_label 30
+     59.1  000000                      PUBWEAK _interrupt_30
+     59.2  000000                              _interrupt_30:
+     60    000000                      declare_label 31
+     60.1  000000                      PUBWEAK _interrupt_31
+     60.2  000000                              _interrupt_31:
+     61                        
+     62    000000 9D                   NOP                                   ;; put a breakpoint here
+     63    000001 20 FD                JRA    unhandled_exception
+     64                        
+     65                        
+     66                        /*
+     67                         * The interrupt vector table.
+     68                         */
+     69                        
+     70                        
+     71    000000                      SECTION `.intvec`:CONST
+     72                        
+     77                        
+     78    000000                      PUBLIC  __intvec
+     79    000000                      EXTERN   __iar_program_start
+     80                                
+     81                        
+     82                        
+     83    000000              __intvec:
+     84    000000 82                   DC8     0x82
+     85    000001 ......               DC24    __iar_program_start          ;; RESET    0x8000
+     86    000004 82                   DC8     0x82
+     87    000005 009004               DC24    0x9004
+     88    000008 82                   DC8     0x82
+     89    000009 009008               DC24    0x9008
+     90    00000C 82                   DC8     0x82
+     91    00000D 00900C               DC24    0x900C
+     92    000010 82                   DC8     0x82
+     93    000011 009010               DC24    0x9010
+     94    000014 82                   DC8     0x82
+     95    000015 009014               DC24    0x9014
+     96    000018 82                   DC8     0x82
+     97    000019 009018               DC24    0x9018
+     98    00001C 82                   DC8     0x82
+     99    00001D 00901C               DC24    0x901C
+    100    000020 82                   DC8     0x82
+    101    000021 009020               DC24    0x9020
+    102    000024 82                   DC8     0x82
+    103    000025 009024               DC24    0x9024
+    104    000028 82                   DC8     0x82
+    105    000029 009028               DC24    0x9028
+    106    00002C 82                   DC8     0x82
+    107    00002D 00902C               DC24    0x902C
+    108    000030 82                   DC8     0x82
+    109    000031 009030               DC24    0x9030
+    110    000034 82                   DC8     0x82
+    111    000035 009034               DC24    0x9034
+    112    000038 82                   DC8     0x82
+    113    000039 009038               DC24    0x9038
+    114    00003C 82                   DC8     0x82
+    115    00003D 00903C               DC24    0x903C
+    116    000040 82                   DC8     0x82
+    117    000041 009040               DC24    0x9040
+    118    000044 82                   DC8     0x82
+    119    000045 009044               DC24    0x9044
+    120    000048 82                   DC8     0x82
+    121    000049 009048               DC24    0x9048
+    122    00004C 82                   DC8     0x82
+    123    00004D 00904C               DC24    0x904C
+    124    000050 82                   DC8     0x82
+    125    000051 009050               DC24    0x9050
+    126    000054 82                   DC8     0x82
+    127    000055 009054               DC24    0x9054
+    128    000058 82                   DC8     0x82
+    129    000059 009058               DC24    0x9058
+    130    00005C 82                   DC8     0x82
+    131    00005D 00905C               DC24    0x905C
+    132    000060 82                   DC8     0x82
+    133    000061 009060               DC24    0x9060
+    134    000064 82                   DC8     0x82
+    135    000065 009064               DC24    0x9064
+    136    000068 82                   DC8     0x82
+    137    000069 009068               DC24    0x9068
+    138    00006C 82                   DC8     0x82
+    139    00006D 00906C               DC24    0x906C
+    140    000070 82                   DC8     0x82
+    141    000071 009070               DC24    0x9070
+    142    000074 82                   DC8     0x82
+    143    000075 009074               DC24    0x9074
+    144    000078 82                   DC8     0x82
+    145    000079 009078               DC24    0x9078
+    146    00007C 82                   DC8     0x82
+    147    00007D 00907C               DC24    0x907C
+    148                        
+    149    000080                      END
+ 
+   3 bytes in section .far_func.text  , module ?interrupt
+ 128 bytes in section .intvec         , module ?interrupt
+ 
+   3 bytes of CODE  memory  in module ?interrupt
+ 128 bytes of CONST memory  in module ?interrupt
+
+Errors: none
+Warnings: none

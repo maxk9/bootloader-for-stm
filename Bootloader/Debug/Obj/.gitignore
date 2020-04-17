@@ -1,0 +1,11 @@
+*.o
+*.pbi.cout
+*.pbi
+*.pbd
+*.pbd.browse
+*.ninja_deps
+*.ninja_log
+*.ninja
+*.pbi.dep
+*.xcl
+*.pbw
